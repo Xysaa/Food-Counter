@@ -62,6 +62,10 @@
             background-color: #4CAF50;
             color: white;
         }
+        .rem-btn {
+            background-color: Red;
+            color: white;
+        }
 
         .add-btn:hover {
             background-color: #45a049;
@@ -89,6 +93,7 @@
             <div class="food-name">Risol Mayo Gacha</div>
             <div class="counter" id="counter1">0</div>
             <button class="add-btn" onclick="increment(1)">Tambah</button>
+            <button class="rem-btn" onclick="decrement(1)">Kurang</button>
         </div>
 
         <div class="food-item">
@@ -96,6 +101,7 @@
             <div class="food-name">Dadar Gulung</div>
             <div class="counter" id="counter2">0</div>
             <button class="add-btn" onclick="increment(2)">Tambah</button>
+            <button class="rem-btn" onclick="decrement(2)">Kurang</button>di 
         </div>
 
         <div class="food-item">
@@ -103,6 +109,7 @@
             <div class="food-name">Pastel</div>
             <div class="counter" id="counter3">0</div>
             <button class="add-btn" onclick="increment(3)">Tambah</button>
+            <button class="rem-btn" onclick="decrement(3)">Kurang</button>
         </div>
 
         <div class="food-item">
@@ -110,12 +117,14 @@
             <div class="food-name">Gehu</div>
             <div class="counter" id="counter4">0</div>
             <button class="add-btn" onclick="increment(4)">Tambah</button>
+            <button class="rem-btn" onclick="decrement(4)">Kurang</button>
         </div>
 
         <div class="food-item">
             <div class="food-name">Es Kuwut</div>
             <div class="counter" id="counter5">0</div>
             <button class="add-btn" onclick="increment(5)">Tambah</button>
+            <button class="rem-btn" onclick="decrement(5)">Kurang</button>
         </div>
     </div>
 
@@ -134,6 +143,10 @@
         // Fungsi untuk menambah nilai counter
         function increment(id) {
             counters[id]++;
+            document.getElementById(`counter${id}`).textContent = counters[id];
+        }
+        function decrement(id) {
+            counters[id]--;
             document.getElementById(`counter${id}`).textContent = counters[id];
         }
 
